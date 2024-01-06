@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Chakra+Petch:wght@300&family=Orbitron&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
-@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
 
 
 *{
@@ -532,21 +531,13 @@ input:-webkit-autofill:active {
     html{
         font-size: 80%;
     }
-    .text h1{
-        font-size: 6rem;
-    }
-    .text h2{
-        font-size: 3rem;
-    }
-    .btn-popup1{
-        font-size: 2rem;
-    }
 }
 
 @media(max-width:991px){
     header{
         padding: 0 1rem;
     }
+
 }
 
 @media(max-width: 895px){
@@ -580,6 +571,17 @@ input:-webkit-autofill:active {
     }
 }
 @media screen and (max-width: 768px) {
+
+    .text h1{
+        font-size: 3.9rem;
+    }
+    .text h2{
+        font-size: 1.9rem;
+    }
+    .btn-popup1{
+        font-size: 1.8rem;
+    }
+
     .wrapper {
         width: 80%; /* Adjust the width as needed */
         height: auto; /* Allow the height to adjust based on content */

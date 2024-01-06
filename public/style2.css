@@ -547,6 +547,15 @@ input:-webkit-autofill:active {
     header{
         padding: 0 1rem;
     }
+    .text h1{
+        font-size: 4rem;
+    }
+    .text h2{
+        font-size: 2rem;
+    }
+    .btn-popup1{
+        font-size: 2rem;
+    }
 }
 
 @media(max-width: 895px){
