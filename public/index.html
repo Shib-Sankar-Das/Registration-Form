@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zen Tech</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
         <div class="logo-container">
             <img class="logo-img" src="image\logo5.gif" alt="">
         </div>
-        <nav class="navigation">
-            <button class="btn-popup btnRegister-popup">Register</button>
-            <button class="btn-popup btnLogin-popup">Login</button>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navigation navbar">
+            <button class="btn-popup btnRegister-popup" id="btnR">Register</button>
+            <button class="btn-popup btnLogin-popup" id="btnL">Login</button>
         </nav>
     </header>
+
+    <div class="text">
+        <h1>Welcome to Zen Tech</h1>
+        <h2>Please Register Your Account</h2>
+        <button class="btn-popup btnRegister-popup1" id="btnR">Register</button>
+    </div>
 
     <div class="wrapper">
         <span class="icon-close"><ion-icon name="close"></ion-icon></span>
@@ -66,9 +76,8 @@
                         <label>Gender</label> -->
                         <select class="form-select" id="floatingSelect" name="gender" aria-label="Floating label select example">
                             <option value="" selected disabled></option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="Male" class="op">Male</option>
+                            <option value="Female" class="op" >Female</option>
                           </select>
                           <label for="floatingSelect" class="Gender-lable">Gender</label>
                           <span class="icon1"><ion-icon name="people"></ion-icon></span>

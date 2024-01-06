@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Chakra+Petch:wght@300&family=Orbitron&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+
 
 *{
     margin: 0;
@@ -9,12 +11,14 @@
 
 body{
     display: flex;
+    
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: url('image/cyberpunk-urban-scenery.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    z-index: 1;
 }
 
 header {
@@ -112,6 +116,7 @@ header {
     overflow: hidden;
     transform: scale(0);
     transition: transform .5s ease,height .2s ease;
+    z-index: 30;
 }
 
 .wrapper.active-popup{
@@ -355,15 +360,163 @@ header {
 
 }
 
+.gender-input select{
+    font-size: 1rem;
+    color: #162938;
+    font-weight: 600;
+}
+
 .gender-input select:focus{
     border: none;
     outline: none;
 }
 
 .gender-input select:focus~label,
-.gender-input select:checked~label{
-    top: -20px;
-    font-size: 1.5rem;
+.gender-input select option:not(:first-of-type)~ .gender-input label{
+    top: -15px;
+    font-size: 1.2rem;
     font-weight: 500;
     color: white;
-  }
+}
+
+.active2{
+    top: -15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+}
+
+
+.op{
+    font-size: 1rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+.text {
+    text-align: center;
+    color: white; /* Adjust text color */
+    position: absolute; /* Set position to relative */
+    z-index: 2; /* Ensure it's above the background */
+}
+
+.text h1{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 10rem;
+    padding: 10px;
+    padding-bottom: 10px;
+}
+
+.text h2{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 5rem;
+    padding: 10px;
+}
+
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: white;
+    display: none;
+}
+
+
+@media(max-width:1200px){
+    html{
+        font-size: 80%;
+    }
+    .text h1{
+        font-size: 6rem;
+    }
+    .text h2{
+        font-size: 3rem;
+    }
+}
+
+@media(max-width:991px){
+    header{
+        padding: 0 1rem;
+    }
+}
+
+@media(max-width: 895px){
+    #menu-icon{
+        display: block;
+        color: cyan;
+        font-size: 3rem;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.452);
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.105);
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+
+    .navbar.active1{
+        display: block;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 80%; /* Adjust the width as needed */
+        height: auto; /* Allow the height to adjust based on content */
+        padding: 20px; /* Adjust padding as needed */
+        box-sizing: border-box; /* Include padding in the total width */
+    }
+
+    .wrapper.active{
+        width: 80%;
+        height: 525px;
+    }
+
+    .wrapper .form-box {
+        padding: 20px; /* Adjust padding as needed for form boxes */
+    }
+
+    .input-box {
+        margin: 15px 0; /* Adjust margin for input boxes */
+    }
+
+    .input-box label {
+        font-size: 0.9em; /* Adjust font size for labels */
+    }
+
+    .btn {
+        height: 40px; /* Adjust height for buttons */
+    }
+
+    .login-register {
+        margin: 15px 0; /* Adjust margin for login/register text */
+    }
+
+    .input-box input:focus~label,
+    .input-box input:not(:placeholder-shown)~label {
+    top: -5px;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: white;
+    }
+
+    .pad{
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+}
