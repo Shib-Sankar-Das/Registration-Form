@@ -4,16 +4,251 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zen Tech</title>
-    <link rel="stylesheet" href="/style2.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abel&family=Chakra+Petch:wght@300&family=Orbitron&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/image/background.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 50px;
+    background: rgba(0, 0, 0, 0.322);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+.logo-img {
+    width: 200px;
+    height: auto;
+    animation: 1s steps(34) infinite paused;
+    transition: transform 0.5s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1, 1);
+    animation-play-state: running;
+    animation-delay: -0.5s; /* Start from the 17th frame */
+}
+
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+}
+
+
+.text {
+    text-align: center;
+    color: white; /* Adjust text color */
+    position: absolute; /* Set position to relative */
+    z-index: 2; /* Ensure it's above the background */
+}
+
+.text h1{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 10rem;
+    padding: 10px;
+    padding-bottom: 10px;
+}
+
+.text h2{
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 5rem;
+    padding: 10px;
+    padding-bottom: 30px;
+}
+
+.neon {
+    color: #fff;
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 40px #0ff,
+      0 0 80px #0ff,
+      0 0 90px #0ff,
+      0 0 100px #0ff,
+      0 0 150px #0ff;
+}
+
+.neon1{
+  color: #FB4264;
+  font-size: 9vw;
+  line-height: 9vw;
+  text-shadow: 0 0 3vw #F40A35;
+}
+
+.neon1 {
+    animation: neona 1s ease infinite;
+    -moz-animation: neona 1s ease infinite;
+    -webkit-animation: neona 1s ease infinite;
+}
+
+@keyframes neona {
+    0%,
+    100% {
+      text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+      color: #FED128;
+    }
+    50% {
+      text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+      color: #806914;
+    }
+  }
+  
+
+.btn-popup1{
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: #fff;
+  padding: 1rem 2rem ;
+  border: 0.4rem solid #fff;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  animation: flicker 1.5s infinite alternate;
+  background-color: rgba(0, 0, 0, 0.733);
+  transition: .5s;
+}
+
+.btn-popup1::-moz-selection {
+    background-color: #08f;
+    color: #f40;
+  }
+  
+.btn-popup1::selection {
+    background-color: #08f;
+    color: #f40;
+  }
+  
+.btn-popup1:focus {
+    outline: none;
+  }
+
+.btn-popup1:hover{
+    background-color: black;
+}
+
+  
+  /* Animate neon flicker */
+  @keyframes flicker {
+      
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        
+          text-shadow:
+              -0.2rem -0.2rem 1rem #fff,
+              0.2rem 0.2rem 1rem #fff,
+              0 0 .5rem #f40,
+              0 0 1rem #f40,
+              0 0 1.5rem #f40,
+              0 0 2rem #f40,
+              0 0 2.5rem #f40;
+          
+          box-shadow:
+              0 0 .25rem #fff,
+              inset 0 0 .25rem #fff,
+              0 0 1rem #08f,
+              inset 0 0 1rem #08f,
+              0 0 2rem #08f,
+              inset 0 0 2rem #08f;        
+      }
+      
+      20%, 24%, 55% {        
+          text-shadow: none;
+          box-shadow: none;
+      }    
+  }
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: white;
+    display: none;
+}
+
+
+@media(max-width:1200px){
+    html{
+        font-size: 80%;
+    }
+    .text h1{
+        font-size: 6rem;
+    }
+    .text h2{
+        font-size: 3rem;
+    }
+    .btn-popup1{
+        font-size: 2rem;
+    }
+}
+
+@media(max-width:991px){
+    header{
+        padding: 0 1rem;
+    }
+    .text h1{
+        font-size: 4rem;
+    }
+    .text h2{
+        font-size: 2rem;
+    }
+    .btn-popup1{
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 895px){
+    #menu-icon{
+        display: block;
+        color: cyan;
+        font-size: 3rem;
+    }
+    
+}
+
+    </style>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img class="logo-img" src="/public/image/logo5.gif" alt="">
+            <img class="logo-img" src="/logo5.gif" alt="Example Image">
         </div>
 
         <nav class="navigation navbar">
+            <a class="btn-popup1" href="/index.html">Logout</a>
         </nav>
     </header>
 
@@ -22,9 +257,5 @@
         <h2 class="neon1">In The World of Zen Tech</h2>
     </div>
 
-    
-    <script src="/script2.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
