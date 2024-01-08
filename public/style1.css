@@ -379,12 +379,6 @@ header {
     color: white;
 }
 
-.active2{
-    top: -15px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: white;
-}
 
 
 .op{
@@ -525,7 +519,6 @@ input:-webkit-autofill:active {
     color: white;
     display: none;
 }
-
 
 @media(max-width:1200px){
     html{

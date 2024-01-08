@@ -6,23 +6,6 @@ const btnRegister = document.querySelector('.btnRegister-popup');
 const btnRegister1 = document.querySelector('.btnRegister-popup1');
 const iconClose = document.querySelector('.icon-close');
 
-document.addEventListener('DOMContentLoaded', function () {
-    const gender = document.querySelector('#floatingSelect');
-    const genderLabel = document.querySelector('.Gender-lable'); // Corrected the class name
-
-    gender.addEventListener('change', () => {
-        const choice = gender.value;
-        console.log(choice);
-
-        if (choice === 'Male' || choice === 'Female') {
-            genderLabel.classList.add('active2');
-        } else {
-            genderLabel.classList.remove('active2');
-        }
-    });
-});
-
-
 
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');

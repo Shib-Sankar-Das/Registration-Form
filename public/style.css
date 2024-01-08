@@ -373,14 +373,7 @@ header {
 }
 
 .gender-input select:focus~label,
-.gender-input select option:not(:first-of-type)~ .gender-input label{
-    top: -15px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: white;
-}
-
-.active2{
+.gender-input select option:focus~label{
     top: -15px;
     font-size: 1.2rem;
     font-weight: 500;
@@ -578,6 +571,7 @@ input:-webkit-autofill:active {
         font-size: 2rem;
         margin: 3rem 0;
     }
+
 }
 @media screen and (max-width: 768px) {
     .wrapper {

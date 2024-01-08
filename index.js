@@ -18,7 +18,8 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-mongoose.connect('mongodb://localhost:27017/Database');
+const mySecret = process.env['MONGODB_URL']
+mongoose.connect(mySecret)
 var db = mongoose.connection;
 db.on("error", () => console.log("Error in Connecting to Database"));
 db.once("open", () => console.log("Connected to Database"));
@@ -65,7 +66,7 @@ app.post("/login", async (req, res) => {
         console.log(user);
 
         if (!user) {
-            return res.send('User not found!');
+            return res.redirect('login_fail.html');
         }
 
         // Compare the provided password with the stored password
