@@ -2,6 +2,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const env = require("dotenv").config();
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 const mySecret = process.env['MONGODB_URL']
+console.log(mySecret);
 mongoose.connect(mySecret)
 var db = mongoose.connection;
 db.on("error", () => console.log("Error in Connecting to Database"));
