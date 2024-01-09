@@ -65,7 +65,7 @@ app.post("/login", async (req, res) => {
 
     try {
         const user = await db.collection('users').findOne({ Email: email });
-        console.log(user);
+        console.log(password === user.Password);
 
         if (!user) {
             return res.redirect('login_fail.html');
@@ -78,7 +78,7 @@ app.post("/login", async (req, res) => {
                 message: user.Name
             });
         } else {
-            return res.send('User name or password wrong');
+            return res.redirect('login_fail.html');
         }
     } catch (error) {
         console.error(error);
